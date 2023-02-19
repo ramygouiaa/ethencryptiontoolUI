@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ethereum Publickey Encryption Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Ethereum Publickey Encryption Tool</h1>
+
+    <div id="identity-section">
+        <h2>Generate Identity</h2>
+        <button id="get-identity-btn">Generate</button>
+        <p>Your public key:</p>
+        <div id="encryption-spinner" class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+        <textarea id="public-key-textarea" readonly></textarea>
+        <p>Your private key:</p>
+        <textarea id="private-key-textarea" readonly></textarea>
+        <p>Your address:</p>
+        <textarea id="address-textarea" readonly></textarea>
+    </div>
+
+    <div id="encryption-section">
+        <h2>Encrypt Message</h2>
+        <label for="public-key-input">Recipient's public key:</label>
+        <input type="text" id="public-key-input">
+        <label for="message-input">Message:</label>
+        <input type="text" id="message-input">
+        <button id="encrypt-message-btn">Encrypt</button>
+        <div id="encryption-spinner" class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+        <p>Encrypted message:</p>
+        <textarea id="encrypted-message-textarea" readonly></textarea>
+    </div>
+
+    <div id="decryption-section">
+        <h2>Decrypt Message</h2>
+        <label for="private-key-input">Your private key:</label>
+        <input type="text" id="private-key-input">
+        <label for="encrypted-message-input">Encrypted message:</label>
+        <input type="text" id="encrypted-message-input">
+        <button id="decrypt-message-btn">Decrypt</button>
+        <div id="decryption-spinner" class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+        <p>Decrypted message:</p>
+        <textarea id="decrypted-message-textarea" readonly></textarea>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

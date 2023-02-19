@@ -1,0 +1,282 @@
+
+/* body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 1.5em;
+}
+
+#identity-section,
+#encryption-section,
+#decryption-section {
+  margin-top: 2em;
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+label {
+  display: block;
+}
+
+textarea,
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 6em;
+}
+
+button {
+  margin-top: 1em;
+}
+
+.spinner {
+  display: none;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 1em auto;
+}
+
+.loading-text {
+  display: none;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  #identity-section,
+  #encryption-section,
+  #decryption-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #identity-section .col-2,
+  #encryption-section .col-2,
+  #decryption-section .col-2 {
+    width: 50%;
+    padding: 0 1em;
+  }
+
+  #identity-section .col-1,
+  #encryption-section .col-1,
+  #decryption-section .col-1 {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ */
+
+ /* fonts */
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,700&display=swap');
+
+/* colors */
+:root {
+  --primary-color: #ff6699;
+  --secondary-color: #ffd633;
+  --background-color: #f5f5f5;
+  --accent-color: #ffffff;
+  --text-color: #333333;
+  --button-color: #ff6666;
+  --button-hover-color: #ff3333;
+  --kid-color-1: #FF9AA2;
+  --kid-color-2: #FFB7B2;
+  --kid-color-3: #FFDAC1;
+  --kid-color-4: #E2F0CB;
+  --kid-color-5: #B5EAD7;
+  --kid-color-6: #97a4d5;
+}
+
+/* global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo Chettan 2', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--kid-color-1);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--kid-color-1);
+}
+
+/* input styles */
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: var(--kid-color-2);
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: var(--kid-color-4);
+  color: var(--text-color);
+}
+
+textarea {
+  height: 6rem;
+}
+
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--accent-color);
+  background-color: var(--kid-color-2);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--kid-color-1);
+}
+
+/* spinner */
+.spinner {
+  display: none;
+  border: 16px solid var(--background-color);
+  border-top: 16px solid var(--primary-color);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 1em auto;
+}
+
+.loading-text {
+  display: none;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* sections */
+#identity-section,
+#encryption-section,
+#decryption-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--kid-color-6);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+#identity-section h2,
+#encryption-section h2,
+#decryption-section h2 {
+  color: var(--kid-color-1);
+  margin-bottom: 1rem;
+}
+
+#identity-section label,
+#encryption-section label,
+#decryption-section label {
+  color: var(--kid-color-2);
+}
+
+#identity-section input[type="text"],
+#encryption-section input[type="text"],
+#decryption-section input[type="text"],
+#identity-section textarea,
+#encryption-section textarea,
+#decryption-section textarea {
+  background-color: var(--kid-color-4);
+  color: var(--text-color);
+}
+
+#identity-section button,
+#encryption-section button,
+#decryption-section button {
+  background-color: var(--kid-color-2);
+  color: var(--accent-color);
+}
+
+#identity-section button:hover,
+#encryption-section button:hover,
+#decryption-section button:hover {
+  background-color: var(--kid-color-1);
+}
+
+@media screen and (min-width: 768px) {
+  #identity-section,
+  #encryption-section,
+  #decryption-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #identity-section .col-2,
+  #encryption-section .col-2,
+  #decryption-section .col-2 {
+    width: 50%;
+    padding: 0 1em;
+  }
+
+  #identity-section .col-1,
+  #encryption-section .col-1,
+  #decryption-section .col-1 {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
